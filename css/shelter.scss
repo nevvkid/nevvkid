@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+
+// Import BASSCSS
+@import "basscss/basscss";
+  
+
+
+/**
+ * Your Crap
+ */
+
+.measure { max-width: 48rem; }
+
+// Positioning Utilities
+.relative { position: relative; }
+.absolute { position: absolute; }
+.absolute-center {
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  display: table;
+}
+
+.full-width { width: 100%; }
+
+.post:after {
+  display: block;
+  content: '----------';
+  margin: 80px 0;
+  color: #ccc;
+}
+
+p {padding-bottom: $space;}
+
+
+
+
+
+
+
+// Import theme for pygments
+@import "basscss/syntax";
+

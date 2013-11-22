@@ -1,0 +1,34 @@
+---
+layout: default
+---
+  {% include header.html %}
+  <main>
+    <section class="posts">
+      {% for post in paginator.posts %}
+      <article itemscope itemtype="http://schema.org/Article" class="post">
+        <header>
+          <h2><a href="{{ post.url }}" title="Permalink to {{ post.title }}" rel="bookmark">{{ post.title }}</a></h2>
+        </header>
+        {{ post.content }}
+      </article>
+      {% endfor %}
+    </section>
+    <nav class="prev-and-next">
+      <h1>Previous And Next Post Navigation</h1>
+        {% if paginator.next_page %}
+          <a rel="next" href="/page{{ paginator.next_page }}" title="{{ paginator.next_page.title }}"><span aria-hidden="true">&larr;</span> Older</a> 
+        {% else %}
+          <a rel="next" href="#no"><span aria-hidden="true">&larr;</span> Older</a>
+        {% endif %}
+        {% if paginator.previous_page %}  
+          {% if paginator.page == 2 %}
+            <a rel="prev" href="/"><span aria-hidden="true">Newer &rarr;</span></a>
+          {% else %}
+            <a rel="prev" href="/page{{ paginator.previous_page }}" title="{{ paginator.previous_page.title }}">Newer <span aria-hidden="true">&rarr;</span></a>
+          {% endif %}
+        {% else %}
+          <a rel="prev" href="#no">Newer <span aria-hidden="true">&rarr;</span></a>
+        {% endif %}  
+    </nav>
+  </main>
+  {% include footer.html %}

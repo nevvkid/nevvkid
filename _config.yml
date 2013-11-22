@@ -1,0 +1,31 @@
+title:          Hyde
+url:            http://www.johannes-lohbihler.de
+
+author:
+  name:			    "Johannes Elias Lohbihler"
+  role:         "Product Designer"
+  about:        "I like designing with vim, unix, html, cats, fun people, css, js, cats, nice big monitors, pen and paper, and cats."
+  email:		    "johannes@solution.io"
+  url: 			    "http://www.johannes-lohbihler.de"
+  twitter:		  "nevvkid"
+  github:       "nevvkid"
+  soundcloud:   "johannes-elias"
+  dribble:      "nevvkid"
+  behance:      "nevvkid"
+  tumblr:       "nevvkid"
+  linkedin:     "http://www.linkedin.com/pub/johannes-lohbihler/24/525/283/"
+  xing:         "https://www.xing.com/profiles/Johannes_Lohbihler"
+
+permalink:      pretty
+pygments:		    true
+paginate:		    5
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false 
+
+disqus_shortname:

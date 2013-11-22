@@ -1,0 +1,45 @@
+---
+layout: default
+---
+  {% include header.html %}
+  <main>
+    <div itemscope itemtype="http://schema.org/Article">
+      <article>
+        <header>
+          <h1 itemprop="headline">{{ page.title }}</h1>
+          <time itemprop="datePublished" datetime="{{ page.date | date_to_string }}" pubdate="">{{ page.date | date_to_string }}</time>
+        </header>
+        <section itemprop="articleBody">
+          {{ content }}
+        </section>
+        <footer>
+        </footer>
+      </article>
+      {% include disqus.html %}
+    </div>
+    <nav class="prev-and-next">
+      {% if page.previous %}
+      <a rel="prev" href="{{ page.previous.url }}" title="View {{ page.previous.title }}"><span aria-hidden="true">&larr;</span> Older</a>
+      {% endif %}
+      {% if page.previous and page.next %}
+      {% endif %}
+      {% if page.next %}
+      <a rel="next" href="{{ page.next.url }}" title="View {{ page.next.title }}">Newer <span aria-hidden="true">&rarr;</span></a>
+      {% endif %}
+    </nav>
+    <nav class="related">
+      <h1>Related Posts</h1>
+      <ul class="related-posts">
+        {% for post in site.related_posts limit:3 %}
+          <li>
+            <h2>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+                <small>{{ post.date | date_to_string }}</small>
+              </a>
+            </h2>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </main>
