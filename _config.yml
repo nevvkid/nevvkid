@@ -1,13 +1,13 @@
 title:          Hyde
-url:            http://www.johannes-lohbihler.de
+url:            http://www.sschuermann.io
 
 author:
-  name:			    "Johannes Elias Lohbihler"
+  name:			    "Sebastian Schürmann"
   role:         "Product Designer"
   about:        "I like designing with vim, unix, html, cats, fun people, css, js, cats, nice big monitors, pen and paper, and cats."
   email:		    "johannes@solution.io"
   url: 			    "http://www.johannes-lohbihler.de"
-  twitter:		  "nevvkid"
+  twitter:      "nevvkid"
   github:       "nevvkid"
   soundcloud:   "johannes-elias"
   dribble:      "nevvkid"
@@ -29,3 +29,4 @@ kramdown:
   use_coderay: false 
 
 disqus_shortname:
+analytics_id: UA-15779653-1

@@ -4,9 +4,9 @@ layout: default
   {% include header.html %}
   <main>
     <div itemscope itemtype="http://schema.org/Article">
-      <article>
+      <article class="post">
         <header>
-          <h1 itemprop="headline">{{ page.title }}</h1>
+          <h2 itemprop="headline">{{ page.title }}</h2>
           <time itemprop="datePublished" datetime="{{ page.date | date_to_string }}" pubdate="">{{ page.date | date_to_string }}</time>
         </header>
         <section itemprop="articleBody">

@@ -246,7 +246,7 @@ strong, .bold {
 .full-width {
   width: 100%; }
 
-.post:after {
+header nav:after, .post:after {
   display: block;
   content: '----------';
   margin: 80px 0;
@@ -254,6 +254,36 @@ strong, .bold {
 
 p {
   padding-bottom: 1rem; }
+
+img {
+  max-width: 100%; }
+
+.cf:after, .nav:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.nav {
+  list-style: none;
+  margin-left: 0; }
+  .nav > li,
+  .nav > li > a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+
+.nav--banner {
+  text-align: center; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 .hll {
   background-color: #333333; }

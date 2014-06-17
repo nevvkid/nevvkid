@@ -8,13 +8,14 @@ layout: default
       <article itemscope itemtype="http://schema.org/Article" class="post">
         <header>
           <h2><a href="{{ post.url }}" title="Permalink to {{ post.title }}" rel="bookmark">{{ post.title }}</a></h2>
+          <time itemprop="datePublished" datetime="{{ post.date | date_to_string }}" pubdate="">{{ post.date | date_to_string }}</time>
         </header>
         {{ post.content }}
       </article>
       {% endfor %}
     </section>
     <nav class="prev-and-next">
-      <h1>Previous And Next Post Navigation</h1>
+      <h1 class="visuallyhidden">Previous And Next Post Navigation</h1>
         {% if paginator.next_page %}
           <a rel="next" href="/page{{ paginator.next_page }}" title="{{ paginator.next_page.title }}"><span aria-hidden="true">&larr;</span> Older</a> 
         {% else %}
@@ -32,3 +33,4 @@ layout: default
     </nav>
   </main>
   {% include footer.html %}
+  {% include analytics.html %}
